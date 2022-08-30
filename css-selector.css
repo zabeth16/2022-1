@@ -1,0 +1,529 @@
+/* id 選擇器 */
+#text-effect{ font-weight : bold ; } 
+
+
+#square-1{
+    height: 300px;
+    width: 2400px;
+    max-width: 100%;
+    background-color: #fa7032;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    
+    display:  flex;
+    align-items: center;
+    justify-content:  center;
+
+    /*text-align: center;*/
+    color: rgb(0, 0, 0);
+    font-weight : bold ; font-size : 25px;
+    
+}
+
+
+/* 標籤選擇器 */
+body{background-color:	rgb(24, 26, 27); color: rgb(221, 218, 214);}
+/*
+span{background-color:rgb(214, 211, 34);} 
+後來有其他span需要做不同應用，便取消使用標籤選擇器了。
+*/ 
+
+ul{
+    display:block;
+    margin-top: 50px;
+    margin-left: 50px;
+    
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+
+    font-size: 25px;
+}
+
+/* class選擇器 */
+.deep{background-color:	#1d4230; color: #FFFFFF;}
+.underline{text-decoration:underline;}
+
+
+.top{ /*完美置中，如果有再分區塊內文字的話記得是要去調區塊內文字的設定*/
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight : bold ; font-size : 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+
+
+.Q1{ /*只是很純的水平排列容器，看看有無需要分開寫*/
+    display: flex ;
+    justify-content: center;
+    
+}
+
+.content-1{
+    margin-left: 50px;
+    margin-right: 20px;
+    padding-top: 100px;
+}
+
+
+
+.square-2{
+    height: 500px;
+    width: 665px;
+    background-color: rgb(217, 192, 156);
+    max-width: 100%;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+
+    display:  flex;
+    align-items: center;
+    justify-content:  center;
+    text-align: center;
+    
+
+    color: #000;
+    font-weight : bold ; font-size : 25px;
+
+}
+
+
+.content-2{
+    margin-top: 70px;
+    margin-left: 50px;
+    margin-right: 20px;
+    
+
+}
+
+
+.square-3{
+    height: 500px;
+    width: 790px;
+    
+    margin-top: 50px;
+    margin-left:50px;
+    background-color:rgb(225, 223, 80);
+
+    display:  flex;
+    align-items: center;
+    justify-content:  center;
+    text-align: center;
+
+    color: #000;
+    font-weight : bold ; font-size : 25px;
+
+}
+
+
+
+.content-3{
+    margin-top: 70px;
+    margin-left:50px;
+    margin-right:20px;
+    word-wrap: break-word;
+    
+}
+
+
+.table{
+    margin-right: 100px;
+    align-items: left;
+    text-align: left;
+    display: inline-block;
+
+}
+
+
+/*
+計算圓餅圖所需
+
+時間	內容
+9:00~12:00	學習  3hr
+12:00~13:30	午餐  1hr
+13:30~17:00	學習  5.5hr
+17:00~18:00	運動  1hr
+18:00~19:30	晚餐  1.5hr
+19:30~22:00	學習  2.5hr
+22:00~22:30	洗澡+做家事  0.5hr
+22:30~	休息，視情況繼續研究  1.5hr
+睡覺 9hr
+
+
+
+*/
+
+.pie { /*純底*/
+    margin-top:50px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: rgb(43, 64, 98);
+
+    position: relative;
+    overflow: hidden;
+    
+    
+    
+}
+
+
+/*
+這是之前查的覆蓋型要做動畫會比較適合的方法
+.pie::before { 午餐 
+    content: '';
+    display: block;
+    margin-left: 50%;
+    height: 100%;
+    border-radius: 0 100% 100% 0 / 50%;
+    background-color: inherit;
+    transform-origin: left;
+    transform: rotate(45deg);
+
+}
+*/
+
+.for-pie{
+    position: absolute;
+    top:0;
+    right:0;
+    width:50%;
+    height:50%;
+    transform-origin: 0 100%;
+    overflow: none;
+    
+
+}
+
+
+.part-1 { /*午餐*/
+    transform: rotate(0deg) skewY(-60deg);
+    background-color: rgb(244, 214, 41);
+    
+}
+
+/*
+預設-90deg = 0 度
+-80deg = 10 度 = 2%
+或是考慮時間的大概跨度分配，
+一小時是30度。
+
+skewY是顯示的占比範圍，算法是占用時間hr*30，
+再用90-結果 = skewY(要的deg)
+
+rotate角度起始(0deg)是正12:00，依剛才算的: 占用時間hr*30
+持續從0度開始累加上去。
+
+*/
+
+.part-2{ /*學習*/
+    transform: rotate(50deg) skewX(-160deg) scale(1.5); /*有再加scale來填滿覆蓋區塊*/
+    background-color: rgb(205, 112, 50);
+
+
+}
+
+.part-3{ /*運動*/
+    transform: rotate(140deg) skewY(-60deg);
+    background-color: rgb(94, 194, 207);
+
+}
+
+.part-4{ /*晚餐*/
+    transform: rotate(170deg) skewY(-45deg);
+    background-color: rgb(244, 214, 41);
+
+}
+
+.part-5{ /*學習*/
+    transform: rotate(215deg) skewY(25deg) scale(1.5); /*記得加scale*/
+    background-color: rgb(205, 112, 50);
+
+}
+
+
+
+
+
+
+.square-4{
+    height:350px;
+    width:840px;
+
+    background-color: rgb(152, 211, 206);
+    margin-top: 50px;
+    margin-left: 50px;
+
+    display:  flex;
+    align-items: center;
+    justify-content:  center;
+    text-align: center;
+
+    color: #000;
+    font-weight : bold ; font-size : 25px;
+
+}
+
+
+
+
+.micron{
+    /*background-color: rgb(137, 124, 124);*/
+    display: block;
+    max-height:30%;
+    margin-top: 5px;
+    /*margin-left:0px;
+    margin-right:0px;*/
+    /*height:100px;
+    width:100px;*/
+    
+
+
+    
+}
+
+.content-4{
+    margin-left: 50px;
+    margin-right: 20px;
+    margin-top: 150px;
+    word-wrap: break-word;
+    
+}
+
+
+
+.square-5{
+    height: 300px;
+    width:515px;
+    background-color: rgb(54, 107, 188);
+    margin-top: 50px;
+    margin-left: 10px;
+
+    display:  flex;
+    align-items: center;
+    justify-content:  center;
+    text-align: center;
+
+    color: #000;
+    font-weight : bold ; font-size : 25px;
+    
+}
+
+
+.content-5{
+    margin-top: 120px;
+    margin-left: 50px;
+    margin-right: 0px;
+    margin-bottom:10px;
+    line-height:20px;
+    word-wrap: break-word;
+}
+
+
+
+.circle{
+    width:180px;height:180px; /*正圓形，所以寬與高都設一樣*/
+
+    border-radius:999em;
+
+    background-color:rgb(247, 120, 62);
+    color: #000;
+
+
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+   
+}
+
+
+.step{
+    margin-top: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
+    
+
+
+
+}
+
+.step-title{
+    line-height:180px;
+    
+    /*text-shadow: 2px 2px 6px rgb(82, 82, 82);*/
+    font-weight : bold ; font-size : 30px;
+    
+    
+}
+
+
+
+
+.step-detail{
+    margin-left: 50px;
+    margin-top: 50px;
+    font-size: 30px;
+    line-height: 40px;
+    
+
+}
+
+.step-detail-title{
+    font-size: 30px;
+    font-weight : bold ;
+    margin-left: 90px;
+    margin-right: 150px;
+    margin-top: 50px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgb(250, 250, 250)
+    
+}
+
+
+.excel{
+    background-color: #1d4230;
+
+    height:100px;
+    width: 200px;
+    margin:10px 100px;
+    text-align: center;
+
+
+}
+
+.excel-text{
+    line-height:100px;
+    font-weight : bold ;
+}
+
+.S{
+    background-color: #29668f;
+
+    height:100px;
+    width: 200px;
+    margin:10px 100px;
+    text-align: center;
+
+}
+
+.for-table{
+    margin:10px 100px;
+}
+
+
+.square-6{
+    height:300px;
+    width: 750px;
+    background-color: rgb(69, 154, 200);
+    margin-top: 50px;
+    margin-left: 60px;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+}
+
+
+.square-6-text{
+    margin-top: 125px;
+    font-weight : bold ; font-size : 25px;
+    color: #000;
+}
+
+
+
+.content-6{
+    display: block;
+    width:1000px;
+    margin-top: 70px;
+    margin-right:20px;
+    margin-left:10px;
+    white-space:pre-wrap;
+    word-wrap: break-word;
+   
+}
+
+
+.square-7{
+    height:300px;
+    width:690px;
+    margin-top: 50px;
+    background-color:rgb(240, 179, 125);
+    margin-left:60px;
+
+
+    display:  flex;
+    align-items: center;
+    justify-content:  center;
+    text-align: center;
+
+    color: #000;
+    font-weight : bold ; font-size : 25px;
+}
+
+
+.content-7{
+    display: block;
+    width:850px;
+    margin-top: 150px;
+    margin-right:20px;
+    margin-left:60px;
+    word-wrap: break-word;
+    
+    
+    
+}
+
+
+.square-8{
+    height:350px;
+    width:690px;
+    margin-top: 50px;
+    background-color:rgb(255, 255, 255);
+    margin-left:60px;
+    margin-bottom:50px;
+
+
+    display:  flex;
+    align-items: center;
+    justify-content:  center;
+    text-align: center;
+
+    color: #000;
+    font-weight : bold ; font-size : 25px;
+}
+
+
+.content-8{
+    display: block;
+    width:850px;
+    margin-top: 90px;
+    margin-right:20px;
+    margin-left:60px;
+    word-wrap: break-word;
+    
+
+}
+
+
+
+
+
+
+/*RWD*/
+@media (max-width:1250px){
+    /*螢幕寬度小於1250的，套用這個css，通常這是平板*/
+
+    
+}
+
+
+
+
+
