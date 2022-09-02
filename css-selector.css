@@ -4,13 +4,16 @@
 
 #square-1{
     height: 300px;
-    width: 2400px;
+    width: 560px;
     max-width: 100%;
-    background-color: #fa7032;
+    background-color: rgb(205, 112, 50);
     margin-top: 50px;
     margin-bottom: 10px;
     margin-left: 50px;
     
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+
     display:  flex;
     align-items: center;
     justify-content:  center;
@@ -23,11 +26,16 @@
 
 
 /* 標籤選擇器 */
-body{background-color:	rgb(24, 26, 27); color: rgb(221, 218, 214);}
+
+
+body{background-color:	#212529; color: rgb(221, 218, 214);}
 /*
 span{background-color:rgb(214, 211, 34);} 
 後來有其他span需要做不同應用，便取消使用標籤選擇器了。
 */ 
+
+
+
 
 ul{
     display:block;
@@ -66,18 +74,23 @@ ul{
     margin-left: 50px;
     margin-right: 20px;
     padding-top: 100px;
+    word-wrap: break-word;
 }
 
 
 
 .square-2{
     height: 500px;
-    width: 665px;
-    background-color: rgb(217, 192, 156);
+    width: 650px;
+    background-color: #EEEEEE;
     max-width: 100%;
     margin-top: 50px;
     margin-bottom: 10px;
     margin-left: 50px;
+
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+
 
     display:  flex;
     align-items: center;
@@ -106,7 +119,7 @@ ul{
     
     margin-top: 50px;
     margin-left:50px;
-    background-color:rgb(225, 223, 80);
+    background-color:rgb(244, 214, 41);
 
     display:  flex;
     align-items: center;
@@ -228,7 +241,7 @@ rotate角度起始(0deg)是正12:00，依剛才算的: 占用時間hr*30
 
 .part-3{ /*運動*/
     transform: rotate(140deg) skewY(-60deg);
-    background-color: rgb(94, 194, 207);
+    background-color: #EEEEEE;
 
 }
 
@@ -253,7 +266,7 @@ rotate角度起始(0deg)是正12:00，依剛才算的: 占用時間hr*30
     height:350px;
     width:840px;
 
-    background-color: rgb(152, 211, 206);
+    background-color: #37578b;
     margin-top: 50px;
     margin-left: 50px;
 
@@ -298,7 +311,7 @@ rotate角度起始(0deg)是正12:00，依剛才算的: 占用時間hr*30
 .square-5{
     height: 300px;
     width:515px;
-    background-color: rgb(54, 107, 188);
+    background-color: rgb(205, 112, 50);
     margin-top: 50px;
     margin-left: 10px;
 
@@ -324,12 +337,60 @@ rotate角度起始(0deg)是正12:00，依剛才算的: 占用時間hr*30
 
 
 
-.circle{
+.circle-1{
     width:180px;height:180px; /*正圓形，所以寬與高都設一樣*/
 
     border-radius:999em;
 
-    background-color:rgb(247, 120, 62);
+    background-color:rgb(205, 112, 50);
+    color: #000;
+
+
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+   
+}
+
+.circle-2{
+    width:180px;height:180px; /*正圓形，所以寬與高都設一樣*/
+
+    border-radius:999em;
+
+    background-color:rgb(244, 214, 41);
+    color: #000;
+
+
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+   
+}
+
+.circle-3{
+    width:180px;height:180px; /*正圓形，所以寬與高都設一樣*/
+
+    border-radius:999em;
+
+    background-color:#37578b;
+    color: #000;
+
+
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+   
+}
+
+.circle-4{
+    width:180px;height:180px; /*正圓形，所以寬與高都設一樣*/
+
+    border-radius:999em;
+
+    background-color:#EEEEEE;
     color: #000;
 
 
@@ -418,7 +479,7 @@ rotate角度起始(0deg)是正12:00，依剛才算的: 占用時間hr*30
 .square-6{
     height:300px;
     width: 750px;
-    background-color: rgb(69, 154, 200);
+    background-color: #37578b;
     margin-top: 50px;
     margin-left: 60px;
 
@@ -454,7 +515,7 @@ rotate角度起始(0deg)是正12:00，依剛才算的: 占用時間hr*30
     height:300px;
     width:690px;
     margin-top: 50px;
-    background-color:rgb(240, 179, 125);
+    background-color:rgb(205, 112, 50);
     margin-left:60px;
 
 
