@@ -2,28 +2,6 @@
 #text-effect{ font-weight : bold ; } 
 
 
-#square-1{
-    height: 300px;
-    width: 40%;
-    max-width: 100%;
-    flex:none;
-    background-color: rgb(205, 112, 50);
-    margin-top: 50px;
-    margin-bottom: 10px;
-    margin-left: 50px;
-    
-    --bs-gutter-x: 1.5rem;
-    --bs-gutter-y: 0;
-
-    display:  flex;
-    align-items: center;
-    justify-content:  center;
-
-    /*text-align: center;*/
-    color: rgb(0, 0, 0);
-    font-weight : bold ; font-size : 25px;
-    
-}
 
 
 /* 標籤選擇器 */
@@ -75,6 +53,31 @@ ul{
     display: flex ;
     justify-content: start;
 }
+
+.square-1{
+    height: 300px;
+    width: 40%;
+    /*max-width: 100%;*/
+    flex:none;
+    background-color: rgb(205, 112, 50);
+    margin-top: 50px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+
+    display:  flex;
+    align-items: center;
+    justify-content:  center;
+
+    /*text-align: center;*/
+    color: rgb(0, 0, 0);
+    font-weight : bold ; font-size : 25px;
+    
+}
+
+
 
 .content-1{
     
@@ -297,21 +300,6 @@ rotate角度起始(0deg)是正12:00，依剛才算的: 占用時間hr*30
 
 
 
-.micron{
-    /*background-color: rgb(137, 124, 124);*/
-    display: block;
-    max-height:30%;
-    margin-top: 5px;
-    /*margin-left:0px;
-    margin-right:0px;*/
-    /*height:100px;
-    width:100px;*/
-    
-
-
-    
-}
-
 .content-4{
     margin-left: 50px;
     margin-right: 20px;
@@ -490,6 +478,10 @@ rotate角度起始(0deg)是正12:00，依剛才算的: 占用時間hr*30
     margin:10px 100px;
 }
 
+.step-describe{
+    text-align: left;
+}
+
 
 .square-6{
     height:300px;
@@ -498,7 +490,7 @@ rotate角度起始(0deg)是正12:00，依剛才算的: 占用時間hr*30
     background-color: #37578b;
     margin-top: 50px;
     margin-left: 60px;
-
+    display: flex;
     justify-content: center;
     align-items: center;
 
@@ -508,7 +500,9 @@ rotate角度起始(0deg)是正12:00，依剛才算的: 占用時間hr*30
 
 
 .square-6-text{
-    margin-top: 120px;
+    
+    text-align: center;
+    /*margin-top: 120px;*/
     font-weight : bold ; font-size : 25px;
     color: #000;
 }
@@ -518,10 +512,10 @@ rotate角度起始(0deg)是正12:00，依剛才算的: 占用時間hr*30
 .content-6{
     display: block;
     width:1000px;
-    margin-top: 30px;
+    margin-top: 80px;
     margin-right:20px;
-    margin-left:10px;
-    white-space:pre-wrap;
+    margin-left:60px;
+    
     word-wrap: break-word;
    
 }
@@ -593,9 +587,18 @@ rotate角度起始(0deg)是正12:00，依剛才算的: 占用時間hr*30
 
 
 
+.PC{
+    display: block;
+}
 
+.mobile{
+    display:block;
+}
 
 /*RWD*/
+
+
+
 @media (max-width:1250px){
     /*螢幕寬度小於1250的，套用這個css，通常這是平板*/
 
@@ -605,4 +608,185 @@ rotate角度起始(0deg)是正12:00，依剛才算的: 占用時間hr*30
 
 
 
+@media (max-width:500px){
+    /*手機用排版 只要螢幕寬度是小於500px的，
+    就套用這個CSS*/
+
+    
+    .Q1{flex-wrap: wrap;}
+    .Q2{flex-wrap: wrap;}
+
+    
+    .square-1{
+        
+        width: 80%;
+        align-items: center;
+        justify-content:  center;
+        margin: 20px 0px;
+        
+
+        
+    }
+    .content-1{
+        width: 80%;
+        margin: 20px 0px;
+
+    }
+
+    .square-2{
+        width:80%;
+        height:300px;
+        align-items: center;
+        justify-content:  center;
+        margin: 20px 0px;
+        font-size: 18px;
+
+    }
+
+    .content-2{
+        width:80%;
+        margin: 20px 0px;
+
+    }
+
+    .square-3{
+        width:80%;
+        margin: 20px 0px; 
+        height: 300px;
+    }
+
+    .content-3{
+        width:80%;
+        margin: 20px 0px;
+    }
+
+    .square-4{
+        width:80%;
+        margin: 30px 0px; 
+        height: 300px;
+
+    }
+
+    .content-4{
+        width:80%;
+        margin: 20px 0px;
+        align-items: center;
+        justify-content:  center;
+
+
+    }
+
+    .square-5{
+        width:80%;
+        margin: 20px 0px;
+        font-size: 20px;
+        height: 300px;
+
+    }
+
+    .content-5{
+        width:80%;
+        margin: 20px 0px;
+    }
+
+    .step{
+        margin: 20px 0px;
+
+    }
+
+    .step-detail{
+        margin: 20px 0px;
+    }
+
+    .step-detail-title{
+        margin: 20px 0px;
+        text-align: center;
+       
+    }
+
+
+
+    .excel{
+        margin: 10px 0px;
+        
+        height:100px;
+        
+    
+
+    }
+
+    .s{
+        margin: 0px 0px;
+        
+        height:100px;
+        
+
+    }
+
+    .excel-text{
+        font-size: 16px;
+        align-items: center;
+        justify-content:  center;
+        text-align: center;
+    }
+
+    
+
+    .for-table{
+        margin: 20px 0px;
+    }
+
+
+
+    .step-describe{
+        display: flex ;
+        justify-content: start;
+        margin: 20px 0px;
+        width: 90%;
+    }
+
+    .square-6{
+        width:80%;
+        margin: 20px 0px;
+        
+    }
+
+    .square-6-text{
+        font-size: 20px;
+    }
+
+    .content-6{
+        width:80%;
+        margin: 20px 0px;
+        
+        justify-content: start;
+        
+    }
+
+    .square-7{
+        width:80%;
+        margin: 20px 0px;
+        font-size: 18px;
+
+    }
+
+    .content-7{
+        width:80%;
+        margin: 20px 0px;
+
+
+    }
+
+    .square-8{
+        width:80%;
+        margin: 20px 0px;
+    }
+
+    .content-8{
+        width:80%;
+        margin: 20px 0px;
+    }
+
+
+}
 
